@@ -5,13 +5,14 @@
 }
 
 body {
-    /* more on this crazy alphanumerical value in a mintue! */
     color: #39a6b2;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* HEADER / NAV STYLES START */
+
 header {
-    /* apply styles to <header> */
     padding: 20px 35px;
     background-color: #39a6b2;
     display: flex;
@@ -64,10 +65,12 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
+/* HEADER / NAV STYLES END */
+
+
+
+/* FOOTER STYLES START */
 footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     background: #fce138;
     width: 100%;
     padding: 40px 35px;
@@ -90,7 +93,9 @@ footer div {
 footer a {
     color: #024e76;
 }
+/* END FOOTER STYLES */
 
+/* STYLE ALL SECTION TAGS */
 section {
     padding: 60px;
 }
@@ -106,15 +111,36 @@ section {
     background-position: 80%;
     align-items: flex-start;
 }
-/* Hero Style End */
+
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+.hero-cta h2 {
+    font-style: italic;
+    font-size: 55px;
+    color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
 
 .hero-form {
     border: 3px solid #024e76;
     background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     color: #024e76;
+    width: 40%;
+    margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
+}
+
+.hero-form button:hover {
+    background: #39a6b2;
 }
 
 .hero-form h3 {
@@ -124,25 +150,7 @@ section {
 
 .hero-form p {
     margin: 5px 0 15px 0;
-    width: 40%;
-    margin: 3.5%;
 }
-
-.hero-cta {
-    width: 35%;
-    text-align: right;
-    margin: 3.5%;
-    color: #fff;
-    font-size: 18px;
-    line-height: 1.2;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-
-.hero-cta h2 {
-    font-style: italic;
-    font-size: 55px;
-    color: #fce138;
-  }
 
 .form-input {
     border: 1px solid #024e76;
@@ -174,25 +182,52 @@ section {
     border-radius: 10px;
 }
 
-.hero-form button:hover {
-    background: #39a6b2;
+.checkbox-wrapper input, .radio-wrapper input {
+    opacity: 0;
 }
 
-.hero-cta {
-    width: 35%;
-    text-align: right;
-    margin: 3.5%;
-    color: #fff;
-    font-size: 18px;
-    line-height: 1.3;
+.checkbox-wrapper label, .radio-wrapper label {
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
 }
 
-.hero-cta h2 {
-    font-style: italic;
-    font-size: 55px;
-    color: #fce138;
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #024e76;
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+/* HERO STYLE ENDS */
+
+
+/* SECTION TITLE STYLES START */
+.section-title {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
+    font-size: 48px;
+    color: #024e76;
+    border-bottom: 3px solid;
 }
 
+.primary-border {
+    border-color: #fce138;
+}
+
+.secondary-border {
+    border-color: #39a6b2;
+}
+/* SECTION TITLE STYLES END */
+
+
+/* WHAT WE DO STYLES */
 .intro p {
     line-height: 1.7;
     color: #39a6b2;
@@ -201,26 +236,12 @@ section {
     margin: 0 auto;
     text-align: center;
 }
+/* WHAT WE DO STLYES END */
 
+
+/* WHAT YOU DO STYLES START */
 .steps {
     background-color: #fce138;
-}
-
-.step h3 {
-    color: #024e76;
-    font-size: 46px;
-    flex: 1 30%;
-}
-
-.step-text p {
-    color: #39a6b2;
-    font-size: 18px;
-}
-
-.step-text h4 {
-    font-size: 26px;
-    line-height: 1.5;
-    color: #024e76;
 }
 
 .step {
@@ -236,6 +257,12 @@ section {
 
 .step:last-child {
     border-bottom: none;
+}
+
+.step h3 {
+    color: #024e76;
+    font-size: 46px;
+    flex: 1 30%;
 }
 
 .step-info {
@@ -258,24 +285,19 @@ section {
     flex: 12;
 }
 
-.section-title {
-    padding-bottom: 20px;
-    text-align: center;
-    margin: 0 auto 35px auto;
-    width: 50%;
-    font-size: 48px;
+.step-text p {
+    color: #39a6b2;
+    font-size: 18px;
+}
+
+.step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
     color: #024e76;
-    border-bottom: 3px solid;
 }
+/* WHAT YOU DO STYLES END */
 
-.primary-border {
-    border-color: #fce138;
-}
-
-.secondary-border {
-    border-color: #39a6b2;
-}
-
+/* MEET THE TRAINERS START */
 .trainers {
     width: 100%;
     margin: 0 auto;
@@ -293,12 +315,10 @@ section {
 
 .trainer img {
     width: 100%;
-    overflow: auto;
 }
 
 .trainer-bio {
     padding: 25px;
-    overflow: auto;
     line-height: 1.3;
 }
 
@@ -315,15 +335,9 @@ section {
 .trainer-bio p {
     font-size: 17px;
 }
+/* TRAINER STYLES END */
 
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
+/* REACH OUT STYLES START */
 .contact {
     background-color: #024e76;
 }
@@ -365,10 +379,6 @@ section {
     font-style: normal;
 }
 
-.contact-info a {
-    color: #fce138;
-}
-
 .contact-form input, .contact-form textarea {
     border: 1px solid #024e76;
     display: block;
@@ -403,10 +413,25 @@ section {
     background: #39a6b2;
 }
 
+.contact-info a {
+    color: #fce138;
+}
+/* REACH OUT STYLES END */
+
+/* UTILITIES */
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
 .flex-row {
     display: flex;
 }
 
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
     header {
         padding-bottom: 0;
@@ -455,6 +480,7 @@ section {
     }
 }
 
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
    section {
        padding: 30px 15px;
@@ -481,8 +507,13 @@ section {
    .step-text {
        flex: 100%;
    }
+
+   .trainer-bio h3, .trainer-bio h4 {
+       display: block;
+   }
 }
 
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
     .hero-form button {
         width: 100%;
